@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program Pal Pathfinder</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages / Static Hosting
+      // This script handles the SPA routing by redirecting all requests to index.html
+      (function() {
+        // If the current path doesn't match the base path of the app
+        if (window.location.pathname !== '/' && !window.location.pathname.includes('.')) {
+          // Save the current path to session storage
+          sessionStorage.setItem('spa_path', window.location.pathname + window.location.search);
+          // Redirect to the root
+          window.location.replace('/');
+        } else if (sessionStorage.getItem('spa_path')) {
+          // If we have a saved path, use React Router to navigate to it
+          const path = sessionStorage.getItem('spa_path');
+          sessionStorage.removeItem('spa_path');
+          // This will be handled by React Router once the app loads
+          window.__INITIAL_PATH__ = path;
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

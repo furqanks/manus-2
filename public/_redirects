@@ -1,0 +1,2 @@
+# Redirects for SPA routing - fixed to avoid infinite loops
+/* /index.html 200
